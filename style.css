@@ -1,0 +1,156 @@
+@import url("https://fonts.cdnfonts.com/css/minecraftia");
+body {
+  background-color: rgb(255, 253, 242);
+  margin: 1rem;
+  padding: 1rem;
+}
+h1 {
+  font-family: "Minecraftia", sans-serif;
+  text-align: center;
+  font-size: 4vh;
+  line-height: 75px;
+  z-index: 3;
+  color: rgb(0, 0, 0);
+  filter: drop-shadow(2px 2px rgb(255, 66, 132));
+}
+form {
+  text-align: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(255, 154, 154, 0.5);
+}
+label {
+  display: block;
+  margin-bottom: 15px;
+  font-family: "Minecraftia", sans-serif;
+  text-align: center;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+input {
+  font-size: 30px;
+  width: 15%;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 15px;
+  transition: transform 0.3s ease;
+  border: solid black 3px;
+}
+input:hover {
+  transform: scale(1.05);
+}
+button[type="submit"] {
+  display: block;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #ffbcdb;
+  transform: scale(1.05);
+  letter-spacing: 3px;
+}
+.sanrio-img {
+  display: block;
+  justify-content: center;
+  padding-left: 50px;
+}
+#zodiac-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 15%;
+  padding-left: 12%;
+}
+.container {
+  display: flex;
+}
+.container div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 45px;
+}
+.aries {
+  background-color: #fff6c7;
+}
+.taurus {
+  background-color: #c5e5fc;
+}
+.gemini {
+  background-color: #e2ffee;
+}
+.cancer {
+  background-color: #ffd7e8;
+}
+.leo {
+  background-color: #ffbbb4;
+}
+.virgo {
+  background-color: #ffd9bf;
+}
+.libra {
+  background-color: #e1f5ff;
+}
+.scorpio {
+  background-color: #ecddff;
+}
+.sagittarius {
+  background-color: #d3dafc;
+}
+.capricorn {
+  background-color: #ffea9f;
+}
+.aquarius {
+  background-color: #ffb1be;
+}
+.pisces {
+  background-color: #c2ffc0;
+}
+.sign {
+  width: 170px;
+  height: 65px;
+  border-radius: 10%;
+  font-size: 12px;
+  cursor: pointer;
+  border: solid;
+  border-color: rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 64, 96, 0.1);
+  transition: all 0.3s ease-in-out;
+  font-family: Dogica;
+}
+.sign:hover {
+  transform: scale(1.15);
+  box-shadow: 1px 7px 10px rgba(0, 89, 255, 0.2);
+}
+.sign:focus {
+  box-shadow: 0 8px 12px rgba(0, 21, 255, 0.2), 0 0 0 2px white;
+  transform: scale(1.2);
+}
+#result {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  background: -webkit-linear-gradient(rgb(255, 93, 152), rgb(60, 51, 225));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+}

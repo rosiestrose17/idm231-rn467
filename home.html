@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WHAT'S YOUR SANRIO ZODIAC SIGN?</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/dogica"
+      type="text/css"
+    />
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="calendar">
+      <h1>WHAT'S YOUR SANRIO ZODIAC SIGN?</h1>
+      <form>
+        <label for="birthdate"> Enter your birthday:</label>
+        <input type="date" id="birthdate" name="birthdate" />
+        <button type="submit">SUBMIT</button>
+      </form>
+      <div id="result">
+        Your Sanrio Character is: <span id="sanrio-character"></span>
+      </div>
+    </div>
+    <section id="zodiac-buttons">
+      <div class="container" id="container">
+        <div id="column-1">
+          <button id="aries" class="sign aries" data-sound="ariesmp3">
+            aries<audio id="ariesmp3" src="audio/Maru.mp3"></audio>
+          </button>
+          <button id="taurus" class="sign taurus" data-sound="taurusmp3">
+            taurus<audio id="taurusmp3" src="audio/tuxedo sam.mp3"></audio>
+          </button>
+          <button id="gemini" class="sign gemini" data-sound="geminimp3">
+            gemini<audio
+              id="geminimp3"
+              src="audio/little twin stars.mp3"
+            ></audio>
+          </button>
+          <button id="cancer" class="sign cancer" data-sound="cancermp3">
+            cancer<audio id="cancermp3" src="audio/melody.mp3"></audio>
+          </button>
+          <button id="leo" class="sign leo" data-sound="leomp3">
+            leo<audio id="leomp3" src="audio/pompom.mp3"></audio>
+          </button>
+          <button id="virgo" class="sign virgo" data-sound="virgomp3">
+            virgo<audio id="virgomp3" src="audio/hello kitty.mp3"></audio>
+          </button>
+        </div>
+      </div>
+        <div class="sanrio-img">
+          <img
+            src="/images/Sanrio-Characters.png"
+            alt="Character"
+            style="width: 95%"
+          />
+          <br />
+        </div>
+        <div id="container" class="container">
+          <div id="column-2">
+          <button id="libra" class="sign libra" data-sound="libramp3">
+            libra<audio id="sound7" src="audio/cinnamonroll.mp3"></audio>
+          </button>
+          <img id="characters" src="/images/cinnamonroll.png" style="display: none;">
+          <button id="scorpio" class="sign scorpio" data-sound="scorpiomp3">
+            scorpio<audio id="sound8" src="audio/kuromi.mp3"></audio>
+          </button>
+          <button
+            id="sagittarius"
+            class="sign sagittarius"
+            data-sound="sagittariusmp3"
+          >
+            sagittarius<audio id="sound9" src="audio/chococat.mp3"></audio>
+          </button>
+          <button id="capricorn" class="sign capricorn" data-sound="capricornmp3">
+            capricorn<audio id="sound10" src="audio/gudetama.mp3"></audio>
+          </button>
+          <button id="aquarius" class="sign aquarius" data-sound="aquariusmp3">
+            aquarius<audio id="sound11" src="audio/my sweet piano.mp3"></audio>
+          </button>
+          <button id="pisces" class="sign pisces" data-sound="piscesmp3">
+            pisces<audio id="sound12" src="audio/kuroppi.mp3"></audio>
+          </button>
+        </div>
+      <p id="description"></p>
+    </div>
+      </div>
+    </section>
+    <script src="zodiac.js"></script>
+  </body>
+</html>
