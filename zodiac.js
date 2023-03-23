@@ -50,7 +50,7 @@ const descriptions = {
   scorpio:
     "You are a Scorpio, which means you are most like Kuromi! You might come off as pretty tough at first, but once people get to know you, they will see that you have a heart of gold underneath. You have a wicked sense of humor and a taste for the darker things in life.",
   sagittarius:
-    "As a Sagittarius, you share a free spirit with Chococat. You tend to be straightforward to the point of being blunt. You qre laidback and easygoing, and the things that bother and stress out other people tend to not get to you! You roll with the punches, able to take on any situation life throws your way.",
+    "As a Sagittarius, you share a free spirit with Chococat. You tend to be straightforward to the point of being blunt. You re laidback and easygoing, and the things that bother and stress out other people tend to not get to you! You roll with the punches, able to take on any situation life throws your way.",
   pisces:
     "You are a Pisces, which means you are most like Hello Keroppi! Like this little frog, you are outgoing and friendly — you can make a pal out of almost anyone. You thrive on having adventures and exploring, which can sometimes get you into trouble. At the end of the day, you just want to have the most fun you can in life.",
 };
