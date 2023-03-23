@@ -1,4 +1,7 @@
 @import url("https://fonts.cdnfonts.com/css/minecraftia");
+@import url("https://fonts.cdnfonts.com/css/quub");
+@import url("https://fonts.cdnfonts.com/css/crima-display");
+
 body {
   background-color: rgb(255, 253, 242);
   margin: 1rem;
@@ -19,6 +22,7 @@ form {
   color: white;
   text-shadow: 2px 2px 4px rgba(255, 154, 154, 0.5);
 }
+
 label {
   display: block;
   margin-bottom: 15px;
@@ -60,15 +64,34 @@ button[type="submit"] {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 button[type="submit"]:hover {
-  background-color: #ffbcdb;
+  background-color: #ff0077;
   transform: scale(1.05);
   letter-spacing: 3px;
 }
 .sanrio-img {
-  display: block;
+  display: flex;
   justify-content: center;
-  padding-left: 50px;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 50px;
 }
+
+.width-60 {
+  width: 60%;
+}
+
+#sanrios {
+  width: 95%;
+  animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translate(0, 20px);
+  }
+}
+
 #zodiac-buttons {
   display: flex;
   justify-content: space-between;
@@ -83,6 +106,7 @@ button[type="submit"]:hover {
   flex-direction: column;
   row-gap: 45px;
 }
+
 .aries {
   background-color: #fff6c7;
 }
@@ -96,7 +120,7 @@ button[type="submit"]:hover {
   background-color: #ffd7e8;
 }
 .leo {
-  background-color: #ffbbb4;
+  background-color: #ffd1cd;
 }
 .virgo {
   background-color: #ffd9bf;
@@ -119,6 +143,7 @@ button[type="submit"]:hover {
 .pisces {
   background-color: #c2ffc0;
 }
+
 .sign {
   width: 170px;
   height: 65px;
@@ -134,23 +159,37 @@ button[type="submit"]:hover {
 }
 .sign:hover {
   transform: scale(1.15);
-  box-shadow: 1px 7px 10px rgba(0, 89, 255, 0.2);
+  box-shadow: 1px 7px 10px rgba(255, 11, 117, 0.2);
 }
 .sign:focus {
-  box-shadow: 0 8px 12px rgba(0, 21, 255, 0.2), 0 0 0 2px white;
+  box-shadow: 2px 5px 5px 5px rgba(0, 16, 198, 0.2), 0 0 2 2px white;
   transform: scale(1.2);
 }
 #result {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bolder;
-  background: -webkit-linear-gradient(rgb(255, 93, 152), rgb(60, 51, 225));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-family: "QUUB", sans-serif;
   display: block;
-  margin: 20px auto;
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+#description {
+  width: 85%;
+  font-size: 22px;
+  text-align: center;
+  font-family: "Crima", sans-serif;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  color: #555555;
+  line-height: 2rem;
+  padding-top: 15px;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

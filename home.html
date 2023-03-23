@@ -11,8 +11,13 @@
       type="text/css"
     />
     <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
+    <i class="fa-solid fa-circle-question"></i>
     <div class="calendar">
       <h1>WHAT'S YOUR SANRIO ZODIAC SIGN?</h1>
       <form>
@@ -27,67 +32,70 @@
     <section id="zodiac-buttons">
       <div class="container" id="container">
         <div id="column-1">
-          <button id="aries" class="sign aries" data-sound="ariesmp3">
-            aries<audio id="ariesmp3" src="audio/Maru.mp3"></audio>
+          <button onclick="aries()" id="aries" class="sign aries">aries</button>
+          <button onclick="taurus()" id="taurus" class="sign taurus">
+            taurus
           </button>
-          <button id="taurus" class="sign taurus" data-sound="taurusmp3">
-            taurus<audio id="taurusmp3" src="audio/tuxedo sam.mp3"></audio>
+          <button onclick="gemini()" id="gemini" class="sign gemini">
+            gemini
           </button>
-          <button id="gemini" class="sign gemini" data-sound="geminimp3">
-            gemini<audio
-              id="geminimp3"
-              src="audio/little twin stars.mp3"
-            ></audio>
+          <button onclick="cancer()" id="cancer" class="sign cancer">
+            cancer
           </button>
-          <button id="cancer" class="sign cancer" data-sound="cancermp3">
-            cancer<audio id="cancermp3" src="audio/melody.mp3"></audio>
-          </button>
-          <button id="leo" class="sign leo" data-sound="leomp3">
-            leo<audio id="leomp3" src="audio/pompom.mp3"></audio>
-          </button>
-          <button id="virgo" class="sign virgo" data-sound="virgomp3">
-            virgo<audio id="virgomp3" src="audio/hello kitty.mp3"></audio>
-          </button>
+          <button onclick="leo()" id="leo" class="sign leo">leo</button>
+          <button onclick="virgo()" id="virgo" class="sign virgo">virgo</button>
         </div>
       </div>
-        <div class="sanrio-img">
-          <img
-            src="/images/Sanrio-Characters.png"
-            alt="Character"
-            style="width: 95%"
-          />
-          <br />
-        </div>
-        <div id="container" class="container">
-          <div id="column-2">
-          <button id="libra" class="sign libra" data-sound="libramp3">
-            libra<audio id="sound7" src="audio/cinnamonroll.mp3"></audio>
+      <div class="sanrio-img">
+        <img
+          id="sanrios"
+          src="./images/Sanrio-Characters.png"
+          alt="Character"
+        />
+        <p id="description"></p>
+      </div>
+      <div id="container" class="container">
+        <div id="column-2">
+          <button
+            onclick="libra()"
+            id="libra"
+            class="sign libra"
+            data-sound="libramp3"
+          >
+            libra
           </button>
-          <img id="characters" src="/images/cinnamonroll.png" style="display: none;">
-          <button id="scorpio" class="sign scorpio" data-sound="scorpiomp3">
-            scorpio<audio id="sound8" src="audio/kuromi.mp3"></audio>
+          <img
+            id="characters"
+            src="./images/cinnamonroll.png"
+            style="display: none"
+          />
+          <button onclick="scorpio()" id="scorpio" class="sign scorpio">
+            scorpio
           </button>
           <button
+            onclick="sagittarius()"
             id="sagittarius"
             class="sign sagittarius"
-            data-sound="sagittariusmp3"
           >
-            sagittarius<audio id="sound9" src="audio/chococat.mp3"></audio>
+            sagittarius
           </button>
-          <button id="capricorn" class="sign capricorn" data-sound="capricornmp3">
-            capricorn<audio id="sound10" src="audio/gudetama.mp3"></audio>
+          <button onclick="capricorn()" id="capricorn" class="sign capricorn">
+            capricorn
           </button>
-          <button id="aquarius" class="sign aquarius" data-sound="aquariusmp3">
-            aquarius<audio id="sound11" src="audio/my sweet piano.mp3"></audio>
+          <button
+            onclick="aquarius()"
+            id="aquarius"
+            class="sign aquarius"
+            data-sound="aquariusmp3"
+          >
+            aquarius
           </button>
-          <button id="pisces" class="sign pisces" data-sound="piscesmp3">
-            pisces<audio id="sound12" src="audio/kuroppi.mp3"></audio>
+          <button onclick="pisces()" id="pisces" class="sign pisces">
+            pisces
           </button>
         </div>
-      <p id="description"></p>
-    </div>
       </div>
     </section>
-    <script src="zodiac.js"></script>
+    <script src="./zodiac.js"></script>
   </body>
 </html>
