@@ -1,4 +1,4 @@
-let prevButton = null;
+// Function to Calculate Zodiac Sign
 function getZodiacSign(day, month) {
   let zodiacSign = "";
   if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
@@ -28,7 +28,7 @@ function getZodiacSign(day, month) {
   }
   return zodiacSign;
 }
-
+// Character & zodiac descritption
 const descriptions = {
   aquarius:
     "You are an Aquarius, which strongly correlates with My Little Piano ! Like this sheep, you're gentle, pampered and is always there for your loved ones. People can always count on you to help them out. However, you also need a lot of freedom and space to do your own thing, as you always have a lot going on in your mind.,",
@@ -59,6 +59,7 @@ const form = document.querySelector("form");
 const input = document.getElementById("birthdate");
 const image = document.getElementById("sanrios");
 const displayDescription = document.getElementById("description");
+// Two variables day and month
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const birthdate = input?.value?.split("-");
@@ -93,103 +94,114 @@ form.addEventListener("submit", function (event) {
     pisces();
   }
 });
+//reset button animation & sound after other button is clicked
+function removeUnused(id, audio) {
+  const otherAudios = document.querySelectorAll("audio");
+  for (let i = 0; i < otherAudios.length; i++) {
+    otherAudios[i].remove();
+  }
 
+  const others = document.querySelectorAll(".sign");
+  for (let i = 0; i < others.length; i++) {
+    others[i].style.transform = "unset";
+  }
+
+  const signButton = document.getElementById(id);
+  signButton.style.transform = "scale(1.2)";
+
+  const player = document.createElement("AUDIO");
+  player.setAttribute("src", audio);
+  const container = document.getElementById(id);
+  container.appendChild(player);
+  player.play();
+}
+//Show each zodiac's corresponding charcter, sound, img, and desc
 function aries() {
-  const audio = new Audio("./audio/Maru.mp3");
-  	audio.play();
+  removeUnused("aries", "./audio/Maru.mp3");
   displayDescription.innerText = descriptions["aries"];
   image.src = "./images/badzt.png";
   image.style.width = "60%";
   document.getElementsByTagName("BODY")[0].setAttribute("class", "aries");
-  
 }
 function taurus() {
-  const audio = new Audio("./audio/tuxedo.mp3");
-  audio.play();
+  removeUnused("taurus", "./audio/tuxedo.mp3");
   displayDescription.innerText = descriptions["taurus"];
   image.src = "./images/tuxedo.png";
   image.style.width = "45%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "taurus")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "taurus");
 }
 function gemini() {
-  const audio = new Audio("./audio/twinstars.mp3");
-  audio.play();
+  removeUnused("gemini", "./audio/twinstars.mp3");
   displayDescription.innerText = descriptions["gemini"];
   image.src = "./images/twinstars.png";
   image.style.width = "45%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "gemini")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "gemini");
 }
 function cancer() {
-  const audio = new Audio("./audio/melody.mp3");
-  audio.play();
+  removeUnused("cancer", "./audio/melody.mp3");
   displayDescription.innerText = descriptions["cancer"];
   image.src = "./images/melody.png";
   image.style.width = "55%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "cancer")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "cancer");
 }
 function virgo() {
-  const audio = new Audio("./audio/hellokitty.mp3");
-  audio.play();
+  removeUnused("virgo", "./audio/hellokitty.mp3");
   displayDescription.innerText = descriptions["virgo"];
   image.src = "./images/hello_kitty.png";
   image.style.width = "45%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "virgo")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "virgo");
 }
 function leo() {
-  const audio = new Audio("./audio/pompom.mp3");
-  audio.play();
+  removeUnused("leo", "./audio/pompom.mp3");
   displayDescription.innerText = descriptions["leo"];
   image.src = "./images/pompom.webp";
   image.style.width = "50%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "leo")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "leo");
 }
 function libra() {
-  const audio = new Audio("./audio/cinnamonroll.mp3");
-  audio.play();
+  removeUnused("libra", "./audio/cinnamonroll.mp3");
   displayDescription.innerText = descriptions["libra"];
   image.src = "./images/cinnamonroll.png";
   image.style.width = "70%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "libra")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "libra");
 }
 function scorpio() {
-  const audio = new Audio("./audio/kuromi.mp3");
-  audio.play();
+  removeUnused("scorpio", "./audio/kuromi.mp3");
   displayDescription.innerText = descriptions["scorpio"];
   image.src = "./images/kuromi.png";
   image.style.width = "40%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "scorpio")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "scorpio");
 }
 function aquarius() {
-  const audio = new Audio("./audio/sweetpiano.mp3");
-  audio.play();
+  removeUnused("aquarius", "./audio/sweetpiano.mp3");
   displayDescription.innerText = descriptions["aquarius"];
   image.src = "./images/little_piano.png";
   image.style.width = "35%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "aquarius")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "aquarius");
 }
 function capricorn() {
-  const audio = new Audio("./audio/gudetama.mp3");
-  audio.play();
+  removeUnused("capricorn", "./audio/gudetama.mp3");
   displayDescription.innerText = descriptions["capricorn"];
   image.src = "./images/gudetama.png";
   image.style.width = "80%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "capricorn")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "capricorn");
 }
 function sagittarius() {
-  const audio = new Audio("./audio/chococat.mp3");
-  audio.play();
+  removeUnused("sagittarius", "./audio/chococat.mp3");
   displayDescription.innerText = descriptions["sagittarius"];
   image.src = "./images/chococat.png";
   image.style.width = "45%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "sagittarius")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "sagittarius");
 }
 function pisces() {
-  const audio = new Audio("./audio/keroppi.mp3");
-  audio.play();
+  removeUnused("pisces", "./audio/keroppi.mp3");
   displayDescription.innerText = descriptions["pisces"];
   image.src = "./images/keroppi.png";
   image.style.width = "53%";
-  document.getElementsByTagName("BODY")[0].setAttribute("class", "pisces")
+  document.getElementsByTagName("BODY")[0].setAttribute("class", "pisces");
 }
-function reset_animation() {
+//Instruction shows up when clicked on icon
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
 }

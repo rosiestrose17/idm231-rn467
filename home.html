@@ -1,75 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <title>WHAT'S YOUR SANRIO ZODIAC SIGN?</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta charset="UTF-8">
+    <title>SANRIO ZODIAC FINDER</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
     <link
       rel="stylesheet"
       media="screen"
       href="https://fontlibrary.org//face/dogica"
       type="text/css"
-    />
-    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" />
+    >
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    >
   </head>
   <body>
-    <i class="fa-solid fa-circle-question"></i>
-    <div class="calendar">
+    <!-- Title + Calendar form submission -->
+       <div class="calendar">
       <h1>WHAT'S YOUR SANRIO ZODIAC SIGN?</h1>
       <form>
         <label for="birthdate"> Enter your birthday:</label>
-        <input type="date" id="birthdate" name="birthdate" />
+        <input type="date" id="birthdate" name="birthdate" >
         <button type="submit">SUBMIT</button>
       </form>
+      <!-- Pop Up Instruction -->
+      <div class="popup" onclick="myFunction()">
+        <img id="help" src="images/help.jpeg" alt="help-icon" style="width: 7%;">
+        <span class="popuptext" id="myPopup"> 
+          <h2>  HOW TO USE? </h2>
+          <h3> 1. Enter your birthday on the calendar </h3>
+          <h3> 2. Click 'submit' to see your Sanrio character</h3>
+          <h3> 3. Click on other buttons to see corresponding characters with each zodiac sign </h3>
+          <br>
+          <img class="manImg" src="images/sanrio2.jpeg" alt="sanrio" style="width: 50%"></img> </span>
+        </div>
+         <!--  Reveal most compaatible Sanrio character-->
       <div id="result">
         Your Sanrio Character is: <span id="sanrio-character"></span>
       </div>
     </div>
+     <!-- Two columns of zodiac buttons-->
     <section id="zodiac-buttons">
-      <div class="container" id="container">
+      <div class="container" >
+          <!-- Left column-->
         <div id="column-1">
-          <button onclick="aries()" id="aries" class="sign aries">aries</button>
-          <button onclick="taurus()" id="taurus" class="sign taurus">
+          <button 
+          onclick="aries()" 
+          id="aries" 
+          class="sign aries">
+            aries
+          </button>
+          <button 
+          onclick="taurus()" 
+          id="taurus" 
+          class="sign taurus">
             taurus
           </button>
-          <button onclick="gemini()" id="gemini" class="sign gemini">
+          <button 
+          onclick="gemini()" 
+          id="gemini" 
+          class="sign gemini">
             gemini
           </button>
-          <button onclick="cancer()" id="cancer" class="sign cancer">
+          <button 
+          onclick="cancer()" 
+          id="cancer" 
+          class="sign cancer">
             cancer
           </button>
-          <button onclick="leo()" id="leo" class="sign leo">leo</button>
-          <button onclick="virgo()" id="virgo" class="sign virgo">virgo</button>
+          <button 
+          onclick="leo()" 
+          id="leo" 
+          class="sign leo">
+          leo
+        </button>
+          <button 
+          onclick="virgo()" 
+          id="virgo" 
+          class="sign virgo">
+          virgo
+        </button>
         </div>
       </div>
+       <!-- Display character img & des based on result-->
       <div class="sanrio-img">
         <img
           id="sanrios"
           src="./images/Sanrio-Characters.png"
           alt="Character"
-        />
+        >
         <p id="description"></p>
       </div>
-      <div id="container" class="container">
+      <!-- Left column-->
+      <div class="container">
         <div id="column-2">
-          <button
-            onclick="libra()"
-            id="libra"
-            class="sign libra"
-            data-sound="libramp3"
-          >
+          <button 
+          onclick="libra()" 
+          id="libra" 
+          class="sign libra">
             libra
           </button>
-          <img
-            id="characters"
-            src="./images/cinnamonroll.png"
-            style="display: none"
-          />
-          <button onclick="scorpio()" id="scorpio" class="sign scorpio">
+          <button 
+          onclick="scorpio()" 
+          id="scorpio" 
+          class="sign scorpio">
             scorpio
           </button>
           <button
@@ -79,18 +115,22 @@
           >
             sagittarius
           </button>
-          <button onclick="capricorn()" id="capricorn" class="sign capricorn">
+          <button 
+          onclick="capricorn()" 
+          id="capricorn" 
+          class="sign capricorn">
             capricorn
           </button>
           <button
             onclick="aquarius()"
             id="aquarius"
-            class="sign aquarius"
-            data-sound="aquariusmp3"
-          >
+            class="sign aquarius">
             aquarius
           </button>
-          <button onclick="pisces()" id="pisces" class="sign pisces">
+          <button 
+            onclick="pisces()" 
+            id="pisces" 
+            class="sign pisces">
             pisces
           </button>
         </div>
