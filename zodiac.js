@@ -1,32 +1,37 @@
 // Function to Calculate Zodiac Sign
-function getZodiacSign(day, month) {
-  let zodiacSign = "";
+const form = document.querySelector("form");
+const input = document.getElementById("birthdate");
+const image = document.getElementById("sanrios");
+const displayDescription = document.getElementById("description");
+
+let horoscopeSign = "";
+function getSanrioZodiac(day, month) {
   if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
-    zodiacSign = "aries";
+    horoscopeSign = "aries";
   } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
-    zodiacSign = "taurus";
+    horoscopeSign = "taurus";
   } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-    zodiacSign = "gemini";
+    horoscopeSign = "gemini";
   } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
-    zodiacSign = "cancer";
+    horoscopeSign = "cancer";
   } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
-    zodiacSign = "leo";
+    horoscopeSign = "leo";
   } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
-    zodiacSign = "virgo";
+    horoscopeSign = "virgo";
   } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
-    zodiacSign = "libra";
+    horoscopeSign = "libra";
   } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
-    zodiacSign = "scorpio";
+    horoscopeSign = "scorpio";
   } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
-    zodiacSign = "sagittarius";
+    horoscopeSign = "sagittarius";
   } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-    zodiacSign = "capricorn";
+    horoscopeSign = "capricorn";
   } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-    zodiacSign = "aquarius";
+    horoscopeSign = "aquarius";
   } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-    zodiacSign = "pisces";
+    horoscopeSign = "pisces";
   }
-  return zodiacSign;
+  return horoscopeSign;
 }
 // Character & zodiac descritption
 const descriptions = {
@@ -50,22 +55,17 @@ const descriptions = {
   scorpio:
     "You are a Scorpio, which means you are most like Kuromi! You might come off as pretty tough at first, but once people get to know you, they will see that you have a heart of gold underneath. You have a wicked sense of humor and a taste for the darker things in life.",
   sagittarius:
-    "As a Sagittarius, you share a free spirit with Chococat. You tend to be straightforward to the point of being blunt. You re laidback and easygoing, and the things that bother and stress out other people tend to not get to you! You roll with the punches, able to take on any situation life throws your way.",
+    "As a Sagittarius, you share a free spirit with Chococat. You tend to be straightforward to the point of being blunt. You qre laidback and easygoing, and the things that bother and stress out other people tend to not get to you! You roll with the punches, able to take on any situation life throws your way.",
   pisces:
     "You are a Pisces, which means you are most like Hello Keroppi! Like this little frog, you are outgoing and friendly — you can make a pal out of almost anyone. You thrive on having adventures and exploring, which can sometimes get you into trouble. At the end of the day, you just want to have the most fun you can in life.",
 };
-
-const form = document.querySelector("form");
-const input = document.getElementById("birthdate");
-const image = document.getElementById("sanrios");
-const displayDescription = document.getElementById("description");
 // Two variables day and month
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   const birthdate = input?.value?.split("-");
   const day = Number(birthdate[2]);
   const month = Number(birthdate[1]);
-  const userSign = getZodiacSign(day, month);
+  const userSign = getSanrioZodiac(day, month);
   displayDescription.innerText = descriptions[userSign];
 
   if (userSign === "aries") {
